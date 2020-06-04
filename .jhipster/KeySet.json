@@ -1,0 +1,48 @@
+{
+  "name": "KeySet",
+  "fields": [
+    {
+      "fieldName": "owner",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "market",
+      "fieldType": "MARKET",
+      "fieldValues": "SAMPLE_ENUM",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "apiKey",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "apiSecret",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "keyCollection",
+      "otherEntityRelationshipName": "keySet",
+      "relationshipName": "keyCollection",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200526181927",
+  "javadoc": "The KeySet entity.\\n@author A true hipster",
+  "entityTableName": "key_set",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["TraderGateway", "TraderServiceAccount"],
+  "microserviceName": "TraderServiceAccount"
+}

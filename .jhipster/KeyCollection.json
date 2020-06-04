@@ -1,0 +1,38 @@
+{
+  "name": "KeyCollection",
+  "fields": [
+    {
+      "fieldName": "owner",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "keySet",
+      "otherEntityRelationshipName": "keyCollection",
+      "relationshipName": "keySet"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "userAccount",
+      "otherEntityRelationshipName": "keyCollection",
+      "relationshipName": "userAccount",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200526181827",
+  "javadoc": "The KeyCollection entity.\\n@author A true hipster",
+  "entityTableName": "key_collection",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["TraderGateway", "TraderServiceAccount"],
+  "microserviceName": "TraderServiceAccount"
+}

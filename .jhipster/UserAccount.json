@@ -1,0 +1,33 @@
+{
+  "name": "UserAccount",
+  "fields": [
+    {
+      "fieldName": "owner",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "keyCollection",
+      "otherEntityRelationshipName": "userAccount",
+      "relationshipName": "keyCollection",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20200526181727",
+  "javadoc": "The UserAccount entity.\\n@author A true hipster",
+  "entityTableName": "user_account",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["TraderGateway", "TraderServiceAccount"],
+  "microserviceName": "TraderServiceAccount"
+}
