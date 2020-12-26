@@ -33,6 +33,6 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": ["TraderGateway", "TraderServiceAccount"],
+  "applications": ["TraderServiceAccount"],
   "microserviceName": "TraderServiceAccount"
 }
